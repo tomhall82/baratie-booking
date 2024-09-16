@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from django.views.generic import TemplateView
 
 # Create your views here.
-def test_view(request):
-    return HttpResponse("Welcome to Baratie!")
+class IndexView(TemplateView):
+    template_name = 'index.html'
