@@ -8,3 +8,9 @@ class booking(models.Model):
     booking_time = models.TimeField()
     booking_party_size = models.IntegerField()
     booking_message = models.TextField()
+
+    class Meta:
+        ordering = ['booking_date']
+
+    def __str__(self):
+        return f"Table for {self.user} booked on {self.booking_date} at {self.booking_time} for {self.booking_party_size} people. Message: {self.booking_message}"

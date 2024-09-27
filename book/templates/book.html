@@ -6,5 +6,36 @@
 <h1>This is the bookings page</h1>
 <p>Book your table here</p>
 
+<form class="container">
+    <div class="mb-3">
+        <label for="bookingName" class="form-label">Booking Name</label>
+        <input type="text" class="form-control" id="bookingName" aria-describedby="bookingName">
+        <div id="bookingName" class="form-text"></div>
+    </div>
+    <span>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Date</label>
+            <input type="date" class="form-control" id="bookingDate" aria-describedby="bookingDate">
+
+            <div class="mb-3"></div>
+            <label for="exampleInputEmail1" class="form-label">Time</label>
+            <input type="time" class="form-control" id="bookingTime" aria-describedby="bookingTime">
+            <div id="dateSelecttext" class="form-text">Let us know when you're coming!</div>
+        </div>
+    </span>
+    <div class="mb-3">
+        <label for="partySize" class="form-label">Party Size</label>
+        <input type="number" class="form-control" id="partySize" aria-describedby="partySize">
+        <div id="partySize" class="form-text">How many in your crew?</div>
+    </div>
+    <div class="mb-3">
+        <label for="bookingMessage" class="form-label">Message for the Baratie</label>
+        <input type="text" class="form-control" id="bookingMessage">
+        <div id="messageText" class="form-text">Anything we need to know? Any dietary restrictions? King of the Pirates
+            in your party?</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
 <!-- index.html content ends here -->
 {% endblock %}
