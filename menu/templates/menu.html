@@ -2,9 +2,54 @@
 
 {% block content %}
 
-<!-- index.html content starts here -->
-<h1>This is the menu page</h1>
-<p>Food goes here</p>
+{% load static %}
 
+<!-- index.html content starts here -->
+<div class="container-fluid">
+    <h1>This is the menu page</h1>
+    <p>Food goes here</p>
+
+    <h2 class="courses">Starters</h2>
+
+    <h2 class="courses">Mains</h2>
+    <div>
+        <h4>Seafood Fried Rice</h4>
+    </div>
+    <div>
+        <h4>Dress Shrimp Paella</h4>
+    </div>
+    <div>
+        <h4>Meat</h4>
+    </div>
+    <div>
+        <h4>Penne Gorgonzola with Sea King Meat</h4>
+    </div>
+    <div>
+        <h4>Oden</h4>
+        <p>A soy-flavored dashi broth base and various flavorful ingredients, all stewed together containing various
+            mushrooms,
+            root vegetables (like daikon and konjac), noodles, and skewered meatballs.</p>
+    </div>
+
+    <h2 class="courses">Kids</h2>
+
+    <h2 class="courses">Sides</h2>
+    <div>
+        <h4>Onigiri</h4>
+    </div>
+
+    <h2 class="courses">Desserts</h2>
+    <div>
+        <h4>Dango</h4>
+        <p>Dango is a traditional Japanese dessert, a small dum<h4ng commonly made from glutinous rice flour (Mochiko),
+                water, and sugar, usually served on a skewer in a group of three to five.</p>
+    </div>
+    <div>
+        <h4>Croquembouche</h4>
+        <p>Croquembouche, a classic French dessert, is an impressive display of small cream-filled choux pastries piled
+            upon
+            each other to make a mountain. It was a favorite on Cake Island.</p>
+    </div>
+</div>
 <!-- index.html content ends here -->
 {% endblock %}
