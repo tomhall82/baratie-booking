@@ -6,34 +6,67 @@
 <h1>This is the bookings page</h1>
 <p>Book your table here</p>
 
-<form class="container">
-    <div class="mb-3">
-        <label for="bookingName" class="form-label">Booking Name</label>
-        <input type="text" class="form-control" id="bookingName" aria-describedby="bookingName">
-        <div id="bookingName" class="form-text"></div>
-    </div>
-    <span>
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Date</label>
-            <input type="date" class="form-control" id="bookingDate" aria-describedby="bookingDate">
+<form class="container" method="POST" action="{% url 'book' %}">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
 
-            <div class="mb-3"></div>
-            <label for="exampleInputEmail1" class="form-label">Time</label>
-            <input type="time" class="form-control" id="bookingTime" aria-describedby="bookingTime">
-            <div id="dateSelecttext" class="form-text">Let us know when you're coming!</div>
-        </div>
-    </span>
+    <!-- Booking Name Field -->
     <div class="mb-3">
-        <label for="partySize" class="form-label">Party Size</label>
-        <input type="number" class="form-control" id="partySize" aria-describedby="partySize">
-        <div id="partySize" class="form-text">How many in your crew?</div>
+        <label for="booking_name" class="form-label">Booking Name</label>
+        <input type="text" class="form-control" id="booking_name" name="booking_name"
+            value="{{ form.booking_name.value }}" required>
+        <div id="booking_name" class="form-text"></div>
+        {% if form.booking_name.errors %}
+        <div class="text-danger">{{ form.booking_name.errors }}</div>
+        {% endif %}
     </div>
+
+    <!-- Date and Time Field -->
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="booking_date" class="form-label">Date</label>
+            <input type="date" class="form-control" id="booking_date" name="booking_date"
+                value="{{ form.booking_date.value }}" required>
+            {% if form.booking_date.errors %}
+            <div class="text-danger">{{ form.booking_date.errors }}</div>
+            {% endif %}
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="booking_time" class="form-label">Time</label>
+            <input type="time" class="form-control" id="booking_time" name="booking_time"
+                value="{{ form.booking_time.value }}" required>
+            {% if form.booking_time.errors %}
+            <div class="text-danger">{{ form.booking_time.errors }}</div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Party Size Field -->
     <div class="mb-3">
-        <label for="bookingMessage" class="form-label">Message for the Baratie</label>
-        <input type="text" class="form-control" id="bookingMessage">
+        <label for="party_size" class="form-label">Party Size</label>
+        <input type="number" class="form-control" id="party_size" name="party_size" value="{{ form.party_size.value }}"
+            required>
+        <div id="party_size" class="form-text">How many in your crew?</div>
+
+        {% if form.party_size.errors %}
+        <div class="text-danger">{{ form.party_size.errors }}</div>
+        {% endif %}
+    </div>
+
+    <!-- Booking Message Field -->
+    <div class="mb-3">
+        <label for="booking_message" class="form-label">Message for the Baratie</label>
+        <textarea class="form-control" id="booking_message"
+            name="booking_message">{{ form.booking_message.value }}</textarea>
         <div id="messageText" class="form-text">Anything we need to know? Any dietary restrictions? King of the Pirates
             in your party?</div>
+
+        {% if form.booking_message.errors %}
+        <div class="text-danger">{{ form.booking_message.errors }}</div>
+        {% endif %}
     </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
