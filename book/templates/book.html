@@ -3,8 +3,7 @@
 {% block content %}
 
 <!-- index.html content starts here -->
-<h1>This is the bookings page</h1>
-<p>Book your table here</p>
+<h1 class="text-center">Book your table at The Baratie</h1>
 
 <form class="container" method="POST" action="{% url 'book' %}">
     {% csrf_token %}

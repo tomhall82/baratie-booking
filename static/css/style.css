@@ -4,5 +4,16 @@ body {
 }
 
 .courses {
-    background-color: gold;
+    background-color: #ebba34;
+    color: #292723;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.menu-image {
+    background-position: no-repeat top center/cover;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    /* float: right; */
 }
