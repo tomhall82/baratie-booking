@@ -3,6 +3,12 @@ body {
     color: #EDEDED;
 }
 
+.btn {
+    background-color: #D39E0B;
+    color: #191919;
+    border: none;
+}
+
 .courses {
     background-color: #D39E0B;
     color: #191919;

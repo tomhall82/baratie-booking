@@ -21,7 +21,9 @@ from book import views as book_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", include("about.urls"), name='about-urls'),
+    path("accounts/", include("allauth.urls")),
     path("menu/", include("menu.urls"), name='menu-urls'),
     path("book/", include("book.urls"), name='book-urls'),
+    path("summernote/", include("django_summernote.urls")),
+    path("", include("about.urls"), name='about-urls'),
 ]

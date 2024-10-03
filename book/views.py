@@ -3,9 +3,10 @@ from django.contrib import messages
 from django.views.generic import CreateView
 from .models import Booking
 from .forms import BookingForm
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 # Class-based view for handling the booking form
-class BookingCreateView(CreateView):
+class BookingCreateView(LoginRequiredMixin, CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'book.html'  # The template for rendering the form
@@ -13,6 +14,7 @@ class BookingCreateView(CreateView):
 
     def form_valid(self, form):
         # If the form is valid, show a success message and save the form
+        form.instance.user = self.request.user
         messages.success(self.request, 'Thanks for your booking!')
         return super().form_valid(form)
 

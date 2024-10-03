@@ -1,6 +1,12 @@
 {% load static %}
 
 {% url 'home' as home_url %}
+{% url 'menu' as menu_url %}
+{% url 'book' as book_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
@@ -8,6 +14,7 @@
 <head>
     <title>The Baratie</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The Baratie - Experience fine dining on the seas! Book a table now.">
 
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -31,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><img src="/static/images/baratie-logo.png" alt=""
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/baratie-logo.png' %}" alt=""
                     id="baratie-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,22 +46,34 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"></li>
-                    <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'home' %}">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == menu_url %}active{% endif %}" aria-current="page"
                             href="{% url 'menu' %}">Menu</a>
                     </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link {% if request.path == book_url %}active{% endif %}" aria-current="page"
-                        href="{% url 'book' %}">Book a table</a>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == book_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'book' %}">Book a table</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
                 </ul>
-                <span class="navbar-text text-muted">
-                    Service, service, still more service!
-                </span>
             </div>
         </div>
     </nav>
@@ -70,7 +89,7 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Tom Hall 2024</p>
-        <p class="m-0 text-center text-white">Follow me: <i class="fab fa-facebook-square ms-3"></i>
+        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
             <i class="fab fa-youtube-square ms-3"></i>
