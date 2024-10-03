@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center">Bookings at The Baratie</h1>
+
+{% if bookings %}
+<table class="container table">
+    <thead>
+        <tr>
+            <th>Booking Name</th>
+            <th>User</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Party Size</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.booking_name }}</td>
+            <td>{{ booking.user }}</td>
+            <td>{{ booking.booking_date }}</td>
+            <td>{{ booking.booking_time }}</td>
+            <td>{{ booking.party_size }}</td>
+            <td>{{ booking.booking_message }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>You don't have any bookings yet.</p>
+{% endif %}
+{% endblock %}
