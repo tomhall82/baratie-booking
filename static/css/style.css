@@ -1,11 +1,11 @@
 body {
-    background-color: black;
-    color: aliceblue;
+    background-color: #191919;
+    color: #EDEDED;
 }
 
 .courses {
-    background-color: #ebba34;
-    color: #292723;
+    background-color: #D39E0B;
+    color: #191919;
     border-radius: 10px;
     text-align: center;
 }
@@ -16,4 +16,14 @@ body {
     height: 100px;
     border-radius: 100px;
     /* float: right; */
+}
+
+#baratie-logo {
+    max-width: 20vw;
+    max-height: 5vh;
+}
+
+.owners {
+    max-width: 300px;
+    max-height: 500px;
 }

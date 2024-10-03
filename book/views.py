@@ -1,26 +1,22 @@
-from django.shortcuts import render, redirect
-from django.views.generic import TemplateView
+from django.urls import reverse_lazy
 from django.contrib import messages
+from django.views.generic import CreateView
 from .models import Booking
 from .forms import BookingForm
 
-# Create your views here.
-        
-class BookingView(TemplateView):
-    template_name = 'book.html'
+# Class-based view for handling the booking form
+class BookingCreateView(CreateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'book.html'  # The template for rendering the form
+    success_url = reverse_lazy('booking_success')  # Redirect to a success page after form submission
 
-def booking_form(request):
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Thanks for your booking!')
-            return redirect('booking_success')
-        else:
-            messages.error(request, 'Please correct the errors below.')
-    
-    else:
-        form = BookingForm()
+    def form_valid(self, form):
+        # If the form is valid, show a success message and save the form
+        messages.success(self.request, 'Thanks for your booking!')
+        return super().form_valid(form)
 
-    return render(request, 'book.html', {'form': form})
+    def form_invalid(self, form):
+        # If the form is invalid, show an error message
+        messages.error(self.request, 'Please correct the errors below.')
+        return super().form_invalid(form)
