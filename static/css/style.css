@@ -21,7 +21,6 @@ body {
     width: 100px;
     height: 100px;
     border-radius: 100px;
-    /* float: right; */
 }
 
 #baratie-logo {
@@ -36,4 +35,42 @@ body {
 
 .table {
     color: #EDEDED;
+}
+
+/* Modal customizations */
+.modal-content {
+    background-color: #191919; /* Match background */
+    color: #EDEDED;           /* Match text color */
+    border-radius: 10px;      /* Rounded corners to match your style */
+}
+
+.modal-header h5 {
+    color: #D39E0B;           /* Primary color for title */
+}
+
+.modal-header .btn-close {
+    background-color: #D39E0B; /* Button close color */
+    border-radius: 50%;
+}
+
+.modal-footer .btn {
+    background-color: #D39E0B; /* Match your button style */
+    color: #191919;
+    border: none;
+}
+
+.modal-footer .btn-danger {
+    background-color: #D39E0B; /* Consistent button color for "Delete" */
+    color: #191919;
+    border: none;
+}
+
+/* Adjust modal body text color */
+.modal-body p {
+    color: #EDEDED;
+}
+
+.modal-footer .btn:hover {
+    background-color: #b88a07; /* Darker shade on hover */
+    color: #fff;
 }

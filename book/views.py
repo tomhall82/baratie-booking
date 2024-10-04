@@ -1,9 +1,10 @@
 from django.urls import reverse_lazy
+from django.shortcuts import redirect
 from django.contrib import messages
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, UpdateView, DeleteView, ListView
 from .models import Booking
 from .forms import BookingForm
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 
 # Class-based view for handling the booking form
 class BookingCreateView(LoginRequiredMixin, CreateView):
@@ -22,7 +23,33 @@ class BookingCreateView(LoginRequiredMixin, CreateView):
         # If the form is invalid, show an error message
         messages.error(self.request, 'Please correct the errors below.')
         return super().form_invalid(form)
-    
+
+# Class-based view for editing the booking form
+class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'booking_edit.html'
+    success_url = reverse_lazy('booking_list')  # Redirect to the list of bookings after successful edit
+
+    def test_func(self):
+        # Ensure that the booking being edited belongs to the logged-in user
+        booking = self.get_object()
+        return self.request.user == booking.user
+
+    def handle_no_permission(self):
+        # If the user is not authorized, redirect to the bookings list
+        messages.error(self.request, "You don't have permission to edit this booking.")
+        return redirect('booking_list')
+
+class BookingDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    model = Booking
+    success_url = reverse_lazy('booking_list')  # Redirect to the list after deletion
+
+    def test_func(self):
+        # Ensure the user deleting the booking is the owner
+        booking = self.get_object()
+        return self.request.user == booking.user
+
 # List view to show all bookings for the logged-in user
 class BookingListView(LoginRequiredMixin, ListView):
     model = Booking
