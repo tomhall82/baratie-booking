@@ -29,7 +29,7 @@ class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     model = Booking
     form_class = BookingForm
     template_name = 'booking_edit.html'
-    success_url = reverse_lazy('booking_list')  # Redirect to the list of bookings after successful edit
+    success_url = reverse_lazy('booking_list')  # Redirect to the list of bookings after editing
 
     def test_func(self):
         # Ensure that the booking being edited belongs to the logged-in user
@@ -40,7 +40,8 @@ class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         # If the user is not authorized, redirect to the bookings list
         messages.error(self.request, "You don't have permission to edit this booking.")
         return redirect('booking_list')
-
+    
+# Class-based view to delete bookings
 class BookingDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Booking
     success_url = reverse_lazy('booking_list')  # Redirect to the list after deletion
@@ -55,7 +56,13 @@ class BookingListView(LoginRequiredMixin, ListView):
     model = Booking
     template_name = 'booking_list.html'
     context_object_name = 'bookings'
+    paginate_by = 10
 
     def get_queryset(self):
-        # Filter bookings by the logged-in user
-        return Booking.objects.filter(user=self.request.user).order_by('booking_date')
+        # Check if the user is a staff member
+        if self.request.user.is_staff:
+            # If staff, return all bookings
+            return Booking.objects.all().order_by('booking_date')
+        else:
+            # If not staff, return only the bookings for the logged-in user
+            return Booking.objects.filter(user=self.request.user).order_by('booking_date')
