@@ -33,6 +33,12 @@ body {
     max-height: 80vh;
 }
 
+.crew-booking {
+    max-width: 50vw;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
 .table {
     color: #EDEDED;
 }
@@ -73,4 +79,11 @@ body {
 .modal-footer .btn:hover {
     background-color: #b88a07; /* Darker shade on hover */
     color: #fff;
+}
+
+ul.errorlist.nonfield {
+    border: none;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }

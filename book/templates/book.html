@@ -7,14 +7,19 @@
 
 <form class="container" method="POST" action="{% url 'book' %}">
     {% csrf_token %}
-    {{ form.non_field_errors }}
+
+    {% if form.non_field_errors %}
+    <div class="alert alert-danger">
+        {{ form.non_field_errors }}
+    </div>
+    {% endif %}
 
     <!-- Booking Name Field -->
     <div class="mb-3">
         <label for="booking_name" class="form-label">Booking Name</label>
         <input type="text" class="form-control" id="booking_name" name="booking_name"
             value="{{ form.booking_name.value }}" required>
-        <div id="booking_name" class="form-text"></div>
+        <div id="booking_name" class="form-text">Please enter the name to be used for your booking</div>
         {% if form.booking_name.errors %}
         <div class="text-danger">{{ form.booking_name.errors }}</div>
         {% endif %}
@@ -27,7 +32,7 @@
             <input type="date" class="form-control" id="booking_date" name="booking_date"
                 value="{{ form.booking_date.value }}" required>
             {% if form.booking_date.errors %}
-            <div class="text-danger">{{ form.booking_date.errors }}</div>
+            <div class="alert alert-danger">{{ form.booking_date.errors }}</div>
             {% endif %}
         </div>
 
