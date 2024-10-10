@@ -87,3 +87,8 @@ ul.errorlist.nonfield {
     margin: 0;
     list-style-type: none;
 }
+
+footer a {
+    color: #EDEDED;
+    text-decoration: none;
+}
