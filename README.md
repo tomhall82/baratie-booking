@@ -10,13 +10,13 @@ This is a website for the fictional restaurant "The Baratie" which is featured i
 
 ## User Experience (UX)
 
-### Strategy
+## Strategy
 
 #### Site Goals
 
 The aim of this site is to enable staff and customers to create, view, edit and delete bookings for the fictional restaurant "The Baratie". 
 
-The site is also intended to give a breif overview oof the history of the restaraunt and show the menu.
+The site is also intended to give a breif overview of the history of the restaraunt and show the menu.
 
 #### Aglie Planning
 
@@ -28,7 +28,7 @@ The Kanban board was created using github projects and can be located [here](htt
 
 ![Baratie Kanban Board](/docs/images/baratie-kanban-board.png)
 
-#### Epics & User Stories
+### Epics & User Stories
 
 **EPIC 1 - Setup**
 - As a developer, I need to set up the project so that it is ready to create the project.
@@ -41,11 +41,15 @@ The Kanban board was created using github projects and can be located [here](htt
 - As a developer I need to create "book.html" so users will be able to book a table at the restaurant.
 - As a developer I need to create "booking_edit.html" so users will be able to edit their booking.
 - As a developer I need to create "booking_success.html" so users will receive confirmation when they have successfully made their booking.
+- As a developer, I need to implement a 403 error page to redirect unauthorised users to.
+- As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist.
+- As a developer, I need to implement a 500 error page to alert users when an internal server error occurs.
 
 **EPIC 3 - Booking**
 - As a user, I would like to be able to create a new booking when I want to visit the restaurant.
 - As a user, I would like to view my bookings to review the information.
 - As a user, I would like to be able to edit a booking so that I can make changes as necessary.
+- As a developer I would like to offer feedback when incorrect data has been entered into booking fields.
 - As a user I would like to delete a booking when no longer required.
 
 **EPIC 4 - User Account**
@@ -59,7 +63,7 @@ The Kanban board was created using github projects and can be located [here](htt
 - Create README.md
 - Create TESTING.md
 
-### Scope
+## Scope
 
 The website should:
 - Be responsive and fully functional across a variety of devices.
@@ -69,7 +73,40 @@ The website should:
 - Allow staff users to view all bookings.
 - Have a home page with information about the restaraunt.
 
-### Structure
+## Structure
+
+### Features
+- base.html features a navagation bar which will adapt to scree size and display different options depending if an authorised user if logged in.
+
+Desktop display not logged in:
+
+![Baratie nav bar not logged in](/docs/images/baratie-nav-bar.png)
+
+Desktop display logged in:
+
+![Baratie nav bar logged in](/docs/images/baratie-nav-bar-logged-in.png)
+
+Mobile display:
+
+![Baratie nav bar mobile](/docs/images/baratie-nav-bar-small.png)
+
+- base.html also features a footer showing the developers name and year of development, along with social media links.
+
+![Baratie footer](/docs/images/baratie-footer.png)
+
+- The home page builds from base.html and contains details about the restaraunt along with a hero image showing the exterior of the establishment.
+
+![Baratie home page](/docs/images/baratie-home.png)
+
+- The menu page builds from base.html and provides information and images of the food on offer.
+
+![Baratie menu](/docs/images/baratie-menu.png)
+
+
+
+### Future Development
+-
+
 
 ## Technolgies
 
@@ -112,31 +149,25 @@ The website should:
 
 **External Python Modules**
 
-* cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
-* crispy-bootstrap5==0.6 - This was used to allow bootstrap5 use with crispy forms
-* cryptography==37.0.2 - Installed as dependency with another package
+* cryptography==43.0.1 - Installed as dependency with another package
 * defusedxml==0.7.1 - Installed as dependency with another package
 * dj-database-url==0.5.0 - Used to parse database url for production environment
-* dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
-* Django==4.0.5 - Framework used to build the application
-* django-admin-rangefilter==0.8.4 - This was used to search bookings in the admin for a range between 2 dates
-* django-allauth==0.51.0 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
-* django-crispy-forms==1.14.0 - Used to style the forms on render
-* django-model-utils==4.2.0 - Installed as dependency with another package
+* Django==4.2.15 - Framework used to build the application
+* django-allauth==0.57.2 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
 * gunicorn==20.1.0 - Installed as dependency with another package
-* idna==3.3 - Installed as dependency with another package
-* oauthlib==3.2.0 - Installed as dependency with another package
-* psycopg2==2.9.3 - Needed for heroku deployment
-* pycparser==2.21 - Installed as dependency with another package
-* PyJWT==2.4.0 - Installed as dependency with another package
+* idna==3.7 - Installed as dependency with another package
+* oauthlib==3.2.2 - Installed as dependency with another package
+* psycopg2==2.9.9 - Needed for heroku deployment
+* pycparser==2.22 - Installed as dependency with another package
+* PyJWT==2.9.0 - Installed as dependency with another package
 * python3-openid==3.2.0 - Installed as dependency with another package
-* requests==2.27.1 - Installed as dependency with another package
-* requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
+* requests==2.31.0 - Installed as dependency with another package
+* requests-oauthlib==2.0.0 - Installed as dependency with another package (allauth authentication)
 * six==1.16.0 - Installed as dependency with another package
-* sqlparse==0.4.2 - Installed as dependency with another package
-* tzdata==2022.1 - Installed as dependency with another package
-* urllib3==1.26.9 - Installed as dependency with another package
-* whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
+* sqlparse==0.5.1 - Installed as dependency with another package
+* tzdata==2024.1 - Installed as dependency with another package
+* urllib3==2.2.1 - Installed as dependency with another package
+* whitenoise==5.3.0 - Used to serve static files directly without use of static resource provider
 
 ## Testing
 
