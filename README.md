@@ -102,7 +102,23 @@ Mobile display:
 
 ![Baratie menu](/docs/images/baratie-menu.png)
 
+- The booking page builds from base.html and is only accessible if the user has logged in to an authorised account.
 
+![Baratie booking page](/docs/images/baratie-booking-form.png)
+
+- Following a successful booking you will be redirected to the booking success page which contains a link to take you back to browse the menu.
+
+![Baratie booking success](/docs/images/baratie-booking-success.png)
+
+- Your bookings page is only available to users who have signed in with an authorised account. This page will only show bookings made by the currently logged in user, unless that user has a staff status.
+
+Individual user:
+
+![Baratie my bookings user](/docs/images/user-my-bookings.png)
+
+Staff user:
+
+![Baratie my bookings staff]
 
 ### Future Development
 -

@@ -32,9 +32,9 @@ class BookingUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = reverse_lazy('booking_list')  # Redirect to the list of bookings after editing
 
     def test_func(self):
-        # Ensure that the booking being edited belongs to the logged-in user
+        # Ensure that the booking being edited belongs to the logged-in user or the user is a staff member
         booking = self.get_object()
-        return self.request.user == booking.user
+        return self.request.user == booking.user or self.request.user.is_staff
 
     def handle_no_permission(self):
         # If the user is not authorized, redirect to the bookings list
@@ -47,9 +47,9 @@ class BookingDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     success_url = reverse_lazy('booking_list')  # Redirect to the list after deletion
 
     def test_func(self):
-        # Ensure the user deleting the booking is the owner
+        # Ensure the user deleting the booking is the owner or a staff member
         booking = self.get_object()
-        return self.request.user == booking.user
+        return self.request.user == booking.user or self.request.user.is_staff
 
 # List view to show all bookings for the logged-in user
 class BookingListView(LoginRequiredMixin, ListView):
