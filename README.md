@@ -8,7 +8,42 @@ This is a website for the fictional restaurant "The Baratie" which is featured i
 
 ## Contents
 
-## User Experience (UX)
+- [The Baratie](#the-baratie)
+
+- [Table of Contents](#contents)
+
+- [Strategy](#strategy)
+  - [Site Goals](#site-goals)
+  - [Aglie Planning](#aglie-planning)
+  - [Epics & User Stories](#epics--user-stories)
+
+- [Scope](#scope)
+
+- [Structure](#structure)
+  - [Features](#features)
+  - [Future Development](#future-development)
+
+- [Skeleton](#skeleton)
+  - [Wireframes](#wireframes)
+  - [Database design](#database-design)
+
+- [Surface](#surface)
+
+- [Technolgies](#technolgies)
+
+- [Testing](#testing)
+
+- [Deployment & Local Development](#deployment--local-development)
+  - [Version Control](#version-control)
+  - [Deployment](#deployment)
+
+- [Credits](#credits)
+  - [Code Used](#code-used)
+  - [Content](#content)
+  - [Media](#media)
+  - [Troubleshooting & Reference Resources](#troubleshooting--reference-resources)
+
+- [Acknowledgments](#acknowledgments)
 
 ## Strategy
 
@@ -293,7 +328,7 @@ For a detailed overview of both manual and automated test cases and results, ple
 
 ### Version Control
 
-The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘Gars-Steakhouse’.
+The site was created using the Visual Studio Code editor and pushed to github to the remote repository ‘baratie-booking’.
 
 The following git commands were used throughout development to push code to the remote repo:
 
@@ -345,8 +380,6 @@ Open the terminal in your code editor and change the current working directory t
 Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 The link to the repository can be found here - [https://github.com/tomhall82/baratie-booking](https://github.com/tomhall82/baratie-booking)
-
-# Credits
 
 ## Credits
 
