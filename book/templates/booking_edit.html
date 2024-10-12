@@ -10,7 +10,8 @@
         <!-- Form fields, similar to the create booking form -->
         <div class="mb-3">
             <label for="booking_name" class="form-label">Booking Name</label>
-            {{ form.booking_name }}
+            <input type="text" class="form-control" id="booking_name" name="booking_name"
+                value="{{ form.booking_name.value }}" required>
             {% if form.booking_name.errors %}
             <div class="text-danger">{{ form.booking_name.errors }}</div>
             {% endif %}

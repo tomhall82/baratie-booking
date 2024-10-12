@@ -150,31 +150,104 @@ Staff user:
 - Refine bookings enable staff to allocate tables.
 - Add functionality for staff to easily amend the menu.
 - Limit restaurant and table capacity.
+- A restaraunt floorplan and table map to allow staff to easily allocate.
+
+## Skeleton
+
+### Wireframes
+
+- Home page
+
+![Home page wireframe](/docs/wireframes/baratie-home-wireframe.png)
+
+- Menu page
+
+![Menu page wireframe](/docs/wireframes/baratie-menu-wireframe.png)
+
+- Create booking page
+
+![Create booking wireframe](/docs/wireframes/baratie-create-booking-wireframe.png)
+
+- View booking page
+
+![View booking wireframe](/docs/wireframes/baratie-view-booking-wireframe.png)
+
+- Edit booking page
+
+![Edit booking wireframe](/docs/wireframes/baratie-edit-booking-wireframe.png)
+
+- Delete modal
+
+![Delete booking wireframe](/docs/wireframes/baratie-delete-booking-wireframe.png)
+
+- Error Pages
+
+![Error page wireframe](/docs/wireframes/baratie-error-wireframe.png)
+
+### Database design
+
+The database has been designed to allow authorised, registered users to be able to create, read, update and delete (CRUD) their own bookings and not be able to see any other users bookings. Users can easliy create their own account from the register tab.
+
+Accounts marked as staff will be able to create, read, update and delete (CRUD) all bookings and be able to see every booking made by all users. Staff users are created using the django admin panel.
+
+The ERD (Entity Relationship Diagram) was designed on [drawSQL](https://drawsql.app/).
+
+![ERD diagram](/docs/images/drawSQL-image-export-2024-10-12.png)
+
+**Security**
+
+Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
+
+## Surface
+
+**Design**
+
+Colour-Scheme
+
+![Baratie colour scheme from Coolors](/docs/images/baratie-colours.png)
+
+The main color schemes for the website are Eerie black ( #191919 ) background. Anti-flash white font (#EDEDED) and Goldenrod (#D39E0B).
+
+**Typography**
+
+The Roboto & Lato fonts have been used throughout the website courtesy of Google Fonts.
+
+**Imagery**
+
+The Website logo is taken from the One Piece anime created by Oda Sensei.
+
+The hero image is taken from the live action adaption of One Piece courtesy of Netflix.
 
 ## Technolgies
 
 - HTML
   - The structure of the Website was developed using HTML as the main language.
 - CSS
-  - The Website was styled using custom CSS in an external file.
+  - Used for custom CSS styling.
 - JavaScript
-  - JavaScript was used to make the custom slider on the menu page change and the bootstrap date picker.
+  - JavaScript was used to make the confirm deletion modal.
 - Python
   - Python was the main programming language used for the application using the Django Framework.
 - Visual Studio Code
-  - The website was developed using Visual Studio Code IDE
-- GitHub
-  - Source code is hosted on GitHub
+  - The website was developed using Visual Studio Code IDE.
+- [GitHub](https://github.com/tomhall82/baratie-booking)
+  - Source code is hosted on GitHub.
 - Git
-  - Used to commit and push code during the development of the Website
-- Font Awesome
-  - This was used for various icons throughout the site
-- Favicon.io
-  - favicon files were created at https://favicon.io/favicon-converter/
-- balsamiq
-  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
+  - Used to commit and push code during the development of the Website.
+- [Heroku](https://dashboard.heroku.com/)
+  - Used to deploy the live website.
+- [Google Fonts](https://fonts.google.com/)
+  - Google fonts provided the fonts for the site
+- [Font Awesome](https://fontawesome.com/)
+  - This was used for various icons throughout the site.
+- [Favicon.io](https://favicon.io/)
+  - To create Favicon.
+- [balsamiq](https://balsamiq.com/wireframes/desktop/#)
+  - To create wireframes.
+- [Coolors](https://coolors.co/)
+  - To create images of colour scheme used.
 - TinyPNG
-  - This was used to compress the hero image for optimal load times
+  - This was used to compress images for optimal load times.
 
 **Frameworks Used**
 
