@@ -134,9 +134,15 @@ Staff user:
 
 **Error Pages**
 
+- A 403 error page has been implemented to provide feedback to the user if they try to access unauthorized content.
+
 ![Baratie 403 page](/docs/images/baratie-403.png)
 
+- A 404 page has been implemented and will display if a user navigates to a broken link.
+
 ![Baratie 403 page](/docs/images/baratie-404.png)
+
+- A 500 error page has been displayed to notify users when an internal server error occurs. The message lets users know that the problem is at our end.
 
 ![Baratie 403 page](/docs/images/baratie-500.png)
 
