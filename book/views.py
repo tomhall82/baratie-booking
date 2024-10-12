@@ -56,7 +56,6 @@ class BookingListView(LoginRequiredMixin, ListView):
     model = Booking
     template_name = 'booking_list.html'
     context_object_name = 'bookings'
-    paginate_by = 10
 
     def get_queryset(self):
         # Check if the user is a staff member

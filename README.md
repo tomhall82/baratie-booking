@@ -110,6 +110,10 @@ Mobile display:
 
 ![Baratie booking success](/docs/images/baratie-booking-success.png)
 
+- Should a field by filled in incorrectly (date in the past or a party of less than 1) and error toast will pop up and identify the error to the user.
+
+![Baratie error toast](/docs/images/toast-error.png)
+
 - Your bookings page is only available to users who have signed in with an authorised account. This page will only show bookings made by the currently logged in user, unless that user has a staff status.
 
 Individual user:
@@ -118,11 +122,28 @@ Individual user:
 
 Staff user:
 
-![Baratie my bookings staff]
+![Baratie my bookings staff](/docs/images/staff-my-bookings.png)
+
+- Delete booking confirmation to ensure user is certain before deleting their booking.
+
+![Baratie confirm delete](/docs/images/baratie-confirm-delete.png)
+
+- A pirate Favicon was implemented across all pages to make the site easy to identify from the users tabs. Of course this had to be the Jolly Roger.
+
+![Baratie favicon](/docs/images/baratie-favicon.png)
+
+**Error Pages**
+
+![Baratie 403 page](/docs/images/baratie-403.png)
+
+![Baratie 403 page](/docs/images/baratie-404.png)
+
+![Baratie 403 page](/docs/images/baratie-500.png)
 
 ### Future Development
--
-
+- Refine bookings enable staff to allocate tables.
+- Add functionality for staff to easily amend the menu.
+- Limit restaurant and table capacity.
 
 ## Technolgies
 
@@ -256,11 +277,13 @@ The link to the repository can be found here - [https://github.com/tomhall82/bar
 
 ### Content
 
--
+- Content for the about section taken from [One Piece Wiki](https://onepiece.fandom.com/wiki/Baratie).
+- Content for the menu taken from [Just One Cookbook](https://www.justonecookbook.com/).
 
 ### Media
 
--
+- Images for the Baratie, Sanji, Zeff and booking success courtesy of [Netflix](https://www.netflix.com/gb/title/80217863).
+- Anime images for error pages courtesy of the [One Piece anime](https://www.crunchyroll.com/series/GRMG8ZQZR/one-piece?srsltid=AfmBOoq0XlK7RIKkiMrkuW9X91aZ-p_7wly5kOzw_MXmjcrIawXui04t) created by Oda Sensei.
 
 ### Troubleshooting & Reference Resources
 
