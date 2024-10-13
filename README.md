@@ -187,6 +187,7 @@ Staff user:
 - Add functionality for staff to easily amend the menu.
 - Limit restaurant and table capacity.
 - A restaurant floorplan and table map to allow staff to easily allocate.
+- Contact page.
 
 ## Skeleton
 
