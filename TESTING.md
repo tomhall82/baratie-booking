@@ -50,7 +50,7 @@ Testing focused on the following areas and identified no issues:
 
 **HTML**
 
-All pages have been run through the [W3C Markup Validation Service](https://validator.w3.org/). All pages have been validated with the exception of booking_edit.html. This is due to a known bug cuased due to the format the date and time are saved in being different from the format the fields wish to display the data as shown in the [Bugs](#bugs) section of this document.
+All pages have been run through the [W3C Markup Validation Service](https://validator.w3.org/). All pages have been validated with the exception of booking_edit.html. This is due to a known bug caused due to the format the date and time are saved in being different from the format the fields wish to display the data as shown in the [Bugs](#bugs) section of this document.
 
 Due to the django templating language code used in the HTML files, it is not possible to copy and paste into the validator. It is also not possible to validate by direct URI due to the secured views and pages which require logins. To test the validation on the files, open the page to validate, right click and view page source. This raw html code can then be copied and pasted into the validator to be tested.
 
@@ -58,7 +58,7 @@ Due to the django templating language code used in the HTML files, it is not pos
 
 **CSS**
 
-The custom CSS was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) with no erros found.
+The custom CSS was validated using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) with no errors found.
 
 ![CSS Validation](/docs/testing/baratie-ws3-css.png)
 
@@ -74,11 +74,43 @@ All python files have been run through the [CI Python Linter](https://pep8ci.her
 
 **Home**
 
+- Desktop
+
+![Home page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-home.png)
+
+- Mobile
+
+![Home page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-home-mobile.png)
+
 **Menu**
+
+- Desktop
+
+![Menu page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-menu.png)
+
+- Mobile
+
+![Menu page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-menu-mobile.png)
 
 **Book a table**
 
+- Desktop
+
+![Book a table page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-booking.png)
+
+- Mobile
+
+![Book a table page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-booking-mobile.png)
+
 **Your bookings**
+
+- Desktop
+
+![Your bookings page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-viewbooking.png)
+
+- Mobile
+
+![Your bookings page desktop lighthouse](/docs/lighthouse/baratie-lighthouse-viewbooking-mobile.png)
 
 ## Bugs
 

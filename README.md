@@ -51,7 +51,7 @@ This is a website for the fictional restaurant "The Baratie" which is featured i
 
 The aim of this site is to enable staff and customers to create, view, edit and delete bookings for the fictional restaurant "The Baratie". 
 
-The site is also intended to give a breif overview of the history of the restaraunt and show the menu.
+The site is also intended to give a brief overview of the history of the restaurant and show the menu.
 
 #### Aglie Planning
 
@@ -71,7 +71,7 @@ The Kanban board was created using github projects and can be located [here](htt
 
 **EPIC 2 - Core pages**
 - As a developer I need to create "base.html" so that I have a platform to build all other pages from.
-- As a developer I need to create "index.html" so users will take them to a landing page which gives infomation about the restaurant.
+- As a developer I need to create "index.html" so users will take them to a landing page which gives information about the restaurant.
 - As a developer I need to create "menu.html" so users will be able to view restaurant menu(s).
 - As a developer I need to create "book.html" so users will be able to book a table at the restaurant.
 - As a developer I need to create "booking_edit.html" so users will be able to edit their booking.
@@ -106,12 +106,12 @@ The website should:
 - Allow authorised users to perform CRUD functionality on bookings.
 - Allow authorised users to view only their bookings.
 - Allow staff users to view all bookings.
-- Have a home page with information about the restaraunt.
+- Have a home page with information about the restaurant.
 
 ## Structure
 
 ### Features
-- base.html features a navagation bar which will adapt to scree size and display different options depending if an authorised user if logged in.
+- base.html features a navigation bar which will adapt to screen size and display different options if an authorised user is logged in.
 
 Desktop display not logged in:
 
@@ -129,7 +129,7 @@ Mobile display:
 
 ![Baratie footer](/docs/images/baratie-footer.png)
 
-- The home page builds from base.html and contains details about the restaraunt along with a hero image showing the exterior of the establishment.
+- The home page builds from base.html and contains details about the restaurant along with a hero image showing the exterior of the establishment.
 
 ![Baratie home page](/docs/images/baratie-home.png)
 
@@ -186,7 +186,7 @@ Staff user:
 - Refine bookings to enable staff to allocate tables.
 - Add functionality for staff to easily amend the menu.
 - Limit restaurant and table capacity.
-- A restaraunt floorplan and table map to allow staff to easily allocate.
+- A restaurant floorplan and table map to allow staff to easily allocate.
 
 ## Skeleton
 
@@ -222,7 +222,7 @@ Staff user:
 
 ### Database design
 
-The database has been designed to allow authorised, registered users to be able to create, read, update and delete (CRUD) their own bookings and not be able to see any other users bookings. Users can easliy create their own account from the register tab.
+The database has been designed to allow authorised, registered users to be able to create, read, update and delete (CRUD) their own bookings and not be able to see any other users bookings. Users can easily create their own account from the register tab.
 
 Accounts marked as staff will be able to create, read, update and delete (CRUD) all bookings and be able to see every booking made by all users. Staff users are created using the django admin panel.
 
@@ -232,7 +232,7 @@ The ERD (Entity Relationship Diagram) was designed on [drawSQL](https://drawsql.
 
 **Security**
 
-Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
+Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, API keys or sensitive information was added to the repository. In production, these variables were added to the heroku config vars within the project.
 
 ## Surface
 
@@ -242,7 +242,7 @@ Colour-Scheme
 
 ![Baratie colour scheme from Coolors](/docs/images/baratie-colours.png)
 
-The main color schemes for the website are Eerie black ( #191919 ) background. Anti-flash white font (#EDEDED) and Goldenrod (#D39E0B).
+The main colour schemes for the website are Eerie black ( #191919 ) background. Anti-flash white font (#EDEDED) and Goldenrod (#D39E0B).
 
 **Typography**
 
@@ -300,7 +300,7 @@ The hero image is taken from the live action adaption of One Piece courtesy of N
 * Django Class based views (ListView, UpdateView, DeleteView, CreateView) - Used for the classes to create, read, update and delete.
 * Mixins (LoginRequiredMixin, UserPassesTestMixin) - Used to enforce login required on views and test user is authorized to perform actions.
 * messages - Used to pass messages to the toasts to display feedback to the user upon actions.
-* reverse_lazy - Used to provide a reversed URL as the url attribute of a generic class-based view.
+* reverse_lazy - Used to provide a reversed URL as the URL attribute of a generic class-based view.
 * redirect - Used to redirect the user to a specified URL
 
 **External Python Modules**
@@ -358,7 +358,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
   - DATABASE_URL: (The URL of your live database)
 - Click the deploy tab
 - Scroll down to Connect to GitHub and sign in / authorize when prompted
-- In the search box, find the repositoy you want to deploy and click connect
+- In the search box, find the repository you want to deploy and click connect
 - Scroll down to Manual deploy and choose the main branch
 - Click deploy
 
