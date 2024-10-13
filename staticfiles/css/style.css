@@ -29,8 +29,7 @@ body {
 }
 
 .owners {
-    max-width: 50vw;
-    max-height: 80vh;
+    max-height: 250px;
 }
 
 .crew-center-image {
