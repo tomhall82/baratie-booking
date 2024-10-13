@@ -78,7 +78,7 @@ body {
 
 .modal-footer .btn:hover {
     background-color: #b88a07; /* Darker shade on hover */
-    color: #fff;
+    color: #EDEDED;
 }
 
 ul.errorlist.nonfield {
@@ -91,4 +91,8 @@ ul.errorlist.nonfield {
 footer a {
     color: #EDEDED;
     text-decoration: none;
+}
+
+.gold {
+    color: #D39E0B;
 }
