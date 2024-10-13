@@ -16,9 +16,9 @@
 
     <!-- Booking Name Field -->
     <div class="mb-3">
-        <label for="booking_name" class="form-label">Booking Name</label>
+        <label for="booking_name" class="form-label"><strong>Booking Name</strong></label>
         <input type="text" class="form-control" id="booking_name" name="booking_name" required>
-        <div id="booking_name" class="form-text">Please enter the name to be used for your booking</div>
+        <div class="gold"><em>Please enter the name to be used for your booking</em></div>
         {% if form.booking_name.errors %}
         <div class="text-danger">{{ form.booking_name.errors }}</div>
         {% endif %}
@@ -27,7 +27,7 @@
     <!-- Date and Time Field -->
     <div class="row">
         <div class="col-md-6 mb-3">
-            <label for="booking_date" class="form-label">Date</label>
+            <label for="booking_date" class="form-label"><strong>Date</strong></label>
             <input type="date" class="form-control" id="booking_date" name="booking_date" required>
             {% if form.booking_date.errors %}
             <div class="alert alert-danger">{{ form.booking_date.errors }}</div>
@@ -35,7 +35,7 @@
         </div>
 
         <div class="col-md-6 mb-3">
-            <label for="booking_time" class="form-label">Time</label>
+            <label for="booking_time" class="form-label"><strong>Time</strong></label>
             <input type="time" class="form-control" id="booking_time" name="booking_time" required>
             {% if form.booking_time.errors %}
             <div class="text-danger">{{ form.booking_time.errors }}</div>
@@ -45,10 +45,9 @@
 
     <!-- Party Size Field -->
     <div class="mb-3">
-        <label for="party_size" class="form-label">Party Size</label>
+        <label for="party_size" class="form-label"><strong>Party Size</strong></label>
         <input type="number" class="form-control" id="party_size" name="party_size" required>
-        <div id="party_size" class="form-text">How many in your crew?</div>
-
+        <div><em>How many in your crew?</em></div>
         {% if form.party_size.errors %}
         <div class="text-danger">{{ form.party_size.errors }}</div>
         {% endif %}
@@ -56,10 +55,10 @@
 
     <!-- Booking Message Field -->
     <div class="mb-3">
-        <label for="booking_message" class="form-label">Message for the Baratie</label>
+        <label for="booking_message" class="form-label"><strong>Message for the Baratie</strong></label>
         <textarea class="form-control" id="booking_message" name="booking_message"></textarea>
-        <div id="messageText" class="form-text">Anything we need to know? Any dietary restrictions? King of the Pirates
-            in your party?</div>
+        <div id="messageText"><em>Anything we need to know? Any dietary restrictions? King of the
+                Pirates in your party?</em></div>
 
         {% if form.booking_message.errors %}
         <div class="text-danger">{{ form.booking_message.errors }}</div>

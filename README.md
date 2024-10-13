@@ -182,7 +182,8 @@ Staff user:
 ![Baratie 403 page](/docs/images/baratie-500.png)
 
 ### Future Development
-- Refine bookings enable staff to allocate tables.
+- Refine booking view to show an overview that once clicked into, shows bookings in detail. Current configuration means users have to scroll to the right on smaller screens to access buttons.
+- Refine bookings to enable staff to allocate tables.
 - Add functionality for staff to easily amend the menu.
 - Limit restaurant and table capacity.
 - A restaraunt floorplan and table map to allow staff to easily allocate.
