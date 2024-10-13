@@ -17,7 +17,6 @@ body {
 }
 
 .menu-image {
-    background-position: no-repeat top center/cover;
     width: 100px;
     height: 100px;
     border-radius: 100px;
@@ -90,8 +89,4 @@ ul.errorlist.nonfield {
 footer a {
     color: #EDEDED;
     text-decoration: none;
-}
-
-.gold {
-    color: #D39E0B;
 }

@@ -2,10 +2,15 @@ from django import forms
 from .models import Booking
 from datetime import time
 
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['booking_name', 'booking_date', 'booking_time', 'party_size', 'booking_message']
+        fields = ['booking_name',
+                  'booking_date',
+                  'booking_time',
+                  'party_size',
+                  'booking_message']
         widgets = {
             'booking_name': forms.TextInput(attrs={'placeholder': ' '}),
             'booking_time': forms.TimeInput(attrs={
@@ -21,5 +26,6 @@ class BookingForm(forms.ModelForm):
         booking_time = self.cleaned_data.get('booking_time')
         if booking_time:
             if booking_time < time(8, 0) or booking_time > time(23, 00):
-                raise forms.ValidationError("Bookings must be during opening hours (08:00-23:00)")
+                raise forms.ValidationError(
+                    "Bookings must be during opening hours (08:00-23:00)")
         return booking_time

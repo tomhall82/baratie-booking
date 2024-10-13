@@ -282,8 +282,12 @@ The hero image is taken from the live action adaption of One Piece courtesy of N
   - To create wireframes.
 - [Coolors](https://coolors.co/)
   - To create images of colour scheme used.
-- TinyPNG
+- [TinyPNG](https://tinypng.com/)
   - This was used to compress images for optimal load times.
+- [Pixelied](https://pixelied.com/)
+  - To convert image file types.
+- [imageresizer.com](https://imageresizer.com/)
+  - To resize and crop images.
 
 **Frameworks Used**
 
